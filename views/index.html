@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+            rel="stylesheet"
+        />
+        <link href="/style.css" rel="stylesheet" />
+        <title>Play Games</title>
+    </head>
+    <body>
+        <div id="games"></div>
+        <script type="text/javascript" src="/vinyl.js"></script>
+        <script type="text/javascript">
+            (async () => {
+                const gamesContainer = document.querySelector("#games");
+                try {
+                    const fetchJson = await fetch("/games.json");
+                    games = await fetchJson.json();
+                    let html = "";
+                    for (let game of games) {
+                        const { name, description, image } = game;
+                        html += `<a href="/${name.toLowerCase()}">
+                                    <h2>${name}</h2><img src="${image}"/>
+                                    <p>${description}</p>
+                                </a>`;
+                    }
+
+                    gamesContainer.innerHTML = html;
+                } catch (err) {
+                    console.log(err);
+                }
+            })();
+        </script>
+    </body>
+</html>

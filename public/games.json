@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Sudoku",
+        "description": "Sudoku is played on a grid of 9 x 9 spaces. Within the rows and columns are 9 squares. Each row, column and square needs to be filled out with the numbers 1-9, without repeating any numbers within the row, column or square. ",
+        "image": "images/sudoku.PNG"
+    },
+    {
+        "name": "Memory",
+        "description": "Who does not know memory? Find all pairs! You can decide how many pairs (16-50). Either choose pictures or numbers or colors (impossible!).",
+        "image": "images/Memory.PNG"
+    },
+    {
+        "name": "SpaceInvaders",
+        "description": "The classical Shoot''em up game. Don''t let the invaders conquer the world! Control it with left and right arrow keys or with the mouse. Shoot: space-key or mouse left-click. Touch control also possible!",
+        "image": "images/SpaceInvaders.PNG"
+    },
+    {
+        "name": "RabbitTracker",
+        "description": "It is played like the classic game Minesweeper. Find the fields, where the rabbits are hiding and surround them.",
+        "image": "images/RabbitTracker.PNG"
+    }
+]
