@@ -21,15 +21,22 @@
         slider.addEventListener("mousemove", slide2);
     }
 
+    function slideTouch(e) {
+        e.preventDefault();
+        sliderBar.addEventListener("touchmove", slide2);
+    }
+
     function slide2(e) {
-        var clientX;
         e.preventDefault;
-        if (e.touches) {
-            clientX = e.touches[0].clientX;
-        } else {
-            clientX = e.clientX;
+        if (e.target.id === "sliderBar" && !e.touches) {
+            return;
         }
-        var posXSliderBar = clientX - slider.offsetLeft;
+        var posXSliderBar;
+        if (e.touches) {
+            posXSliderBar = e.touches[0].clientX - slider.offsetLeft;
+        } else {
+            posXSliderBar = e.offsetX;
+        }
         sliderBar.style.left = posXSliderBar + "px";
         if (posXSliderBar <= slider.offsetWidth * (1 / 12)) {
             memoryPictures = 18;
@@ -104,8 +111,14 @@
     document.addEventListener("mouseup", function () {
         slider.removeEventListener("mousemove", slide2);
     });
+    slider.addEventListener("mouseleave", function () {
+        slider.removeEventListener("mousemove", slide2);
+    });
     //Touch Events
-    sliderBar.addEventListener("touchmove", slide2, { passive: true });
+    slider.addEventListener("touchstart", slideTouch, { passive: true });
+    document.addEventListener("touchend", function () {
+        sliderBar.removeEventListener("touchmove", slide2);
+    });
 
     //Change of type
     type.forEach(function (item, index) {
