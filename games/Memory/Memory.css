@@ -139,10 +139,10 @@ body {
     grid-area: 2 / 2 / 3 / 3;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr
+    /* -ms-grid-rows: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr
         4px 1fr 4px 1fr;
     -ms-grid-columns: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px
-        1fr 4px 1fr 4px 1fr;
+        1fr 4px 1fr 4px 1fr; */
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
     grid-gap: 4px;
     border-radius: 10px;
@@ -158,10 +158,10 @@ body {
     grid-area: 2 / 2 / 3 / 3;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr
+    /* -ms-grid-rows: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr
         4px 1fr 4px 1fr;
     -ms-grid-columns: 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px 1fr 4px
-        1fr 4px 1fr 4px 1fr;
+        1fr 4px 1fr 4px 1fr; */
     grid-template: repeat(10, 1fr) / repeat(10, 1fr);
     grid-gap: 4px;
     border-radius: 10px;
