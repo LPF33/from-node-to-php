@@ -34,6 +34,11 @@
         var posXSliderBar;
         if (e.touches) {
             posXSliderBar = e.touches[0].clientX - slider.offsetLeft;
+            if (posXSliderBar <= 0) {
+                posXSliderBar = 0;
+            } else if (posXSliderBar >= slider.offsetWidth) {
+                posXSliderBar = slider.offsetWidth;
+            }
         } else {
             posXSliderBar = e.offsetX;
         }
