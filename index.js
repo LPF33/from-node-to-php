@@ -2,13 +2,13 @@ const express = require("express");
 const helmet = require("helmet");
 const app = express();
 
-app.use(helmet());
-
 app.use(express.static("public"));
 app.use("/memory", express.static(__dirname + "/games/Memory"));
 app.use("/rabbittracker", express.static(__dirname + "/games/RabbitTracker"));
 app.use("/spaceinvaders", express.static(__dirname + "/games/SpaceInvaders"));
 app.use("/sudoku", express.static(__dirname + "/games/Sudoku"));
+
+app.use(helmet());
 
 app.get("/memory", (req, res) => {
     res.sendFile(__dirname + "/views/memory.html");
