@@ -27,6 +27,10 @@ a {
     margin: 5px;
 }
 
+a:hover {
+    background-color: rgb(255, 255, 184);
+}
+
 img {
     width: 100%;
 }
