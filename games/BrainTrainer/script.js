@@ -5,6 +5,7 @@ let flashingEmojis = 3;
 let randomEmoji = 0;
 let memory = [];
 let playerMove = false;
+const touchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints;
 
 function gamePlay(counter) {
     playerMove = false;
@@ -55,21 +56,23 @@ emojis.forEach((item, index) => {
     });
 });
 
-emojis.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-        if (playerMove) {
-            item.classList.add("flash");
-        }
+if (!touchDevice) {
+    emojis.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+            if (playerMove) {
+                item.classList.add("flash");
+            }
+        });
     });
-});
 
-emojis.forEach((item) => {
-    item.addEventListener("mouseleave", () => {
-        if (playerMove) {
-            item.classList.remove("flash");
-        }
+    emojis.forEach((item) => {
+        item.addEventListener("mouseleave", () => {
+            if (playerMove) {
+                item.classList.remove("flash");
+            }
+        });
     });
-});
+}
 
 function clearFields() {
     emojis.forEach((item) => {
