@@ -2,6 +2,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -13,17 +14,15 @@ header {
     background-color: black;
     color: white;
     font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-}
-
-header #x {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-decoration: none;
-    color: white;
 }
 
 header button {
@@ -41,7 +40,11 @@ header button:hover {
 
 header #counter {
     display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-left: 10px;
     color: rgb(145, 211, 255);
@@ -62,6 +65,8 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -90,9 +95,18 @@ main {
 }
 
 .emojis-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 340px;
     height: 340px;
@@ -109,10 +123,14 @@ main {
     display: inline-block;
     margin: 5px;
     font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
 .emoji.flash {
+    -webkit-filter: invert(90%);
     filter: invert(90%);
 }
 
