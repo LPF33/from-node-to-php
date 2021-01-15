@@ -1,36 +1,30 @@
-const emojis = document.querySelectorAll(".emoji");
-const button = document.querySelector("button");
-const headerP = document.querySelector("#counter");
-let flashingEmojis = 3;
-let randomEmoji = 0;
-let memory = [];
-let playerMove = false;
-const touchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints;
+(function () {
+    const emojis = document.querySelectorAll(".emoji");
+    const button = document.querySelector("button");
+    const headerP = document.querySelector("#counter");
+    let flashingEmojis = 3;
+    let randomEmoji = 0;
+    let memory = [];
+    let playerMove = false;
+    const touchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints;
 
-function gamePlay(counter) {
-    playerMove = false;
-    randomEmoji = Math.floor(Math.random() * 9);
-    emojis[randomEmoji].classList.add("flash");
-    if (counter) {
-        memory.push(randomEmoji);
-        setTimeout(() => {
+    function gamePlay(counter) {
+        playerMove = false;
+        randomEmoji = Math.floor(Math.random() * 9);
+        emojis[randomEmoji].classList.add("flash");
+        if (counter) {
+            memory.push(randomEmoji);
+            setTimeout(() => {
+                emojis[randomEmoji].classList.remove("flash");
+            }, 500);
+            setTimeout(() => gamePlay(--counter), 600);
+        } else {
+            playerMove = true;
             emojis[randomEmoji].classList.remove("flash");
-        }, 500);
-        setTimeout(() => gamePlay(--counter), 600);
-    } else {
-        playerMove = true;
-        emojis[randomEmoji].classList.remove("flash");
+        }
     }
-}
 
-button.addEventListener("click", () => {
-    gamePlay(flashingEmojis);
-    button.style.display = "none";
-    headerP.style.display = "flex";
-});
-
-emojis.forEach((item, index) => {
-    item.addEventListener("click", () => {
+    const handlePlayerMove = (index) => {
         if (playerMove) {
             if (memory[0] === index) {
                 memory.shift();
@@ -53,51 +47,64 @@ emojis.forEach((item, index) => {
                 button.style.display = "inline-block";
             }
         }
-    });
-});
+    };
 
-if (!touchDevice) {
-    emojis.forEach((item) => {
-        item.addEventListener("mouseover", () => {
-            if (playerMove) {
-                item.classList.add("flash");
-            }
+    button.addEventListener("click", () => {
+        gamePlay(flashingEmojis);
+        button.style.display = "none";
+        headerP.style.display = "flex";
+    });
+
+    emojis.forEach((item, index) => {
+        item.addEventListener(touchDevice ? "touchstart" : "click", () => {
+            console.log(touchDevice);
+            handlePlayerMove(index);
         });
     });
 
-    emojis.forEach((item) => {
-        item.addEventListener("mouseleave", () => {
-            if (playerMove) {
-                item.classList.remove("flash");
-            }
+    if (!touchDevice) {
+        emojis.forEach((item) => {
+            item.addEventListener("mouseover", () => {
+                if (playerMove) {
+                    item.classList.add("flash");
+                }
+            });
         });
-    });
-}
 
-function clearFields() {
-    emojis.forEach((item) => {
-        item.classList.remove("flash");
-    });
-}
+        emojis.forEach((item) => {
+            item.addEventListener("mouseleave", () => {
+                if (playerMove) {
+                    item.classList.remove("flash");
+                }
+            });
+        });
+    }
 
-function removeAllClasses() {
-    emojis.forEach((item) => {
-        item.classList.remove("flash");
-        item.classList.remove("red");
-        item.classList.remove("green");
-    });
-}
+    function clearFields() {
+        emojis.forEach((item) => {
+            item.classList.remove("flash");
+        });
+    }
 
-function redFields() {
-    emojis.forEach((item) => {
-        item.classList.add("red");
-    });
-    setTimeout(removeAllClasses, 1000);
-}
+    function removeAllClasses() {
+        emojis.forEach((item) => {
+            item.classList.remove("flash");
+            item.classList.remove("red");
+            item.classList.remove("green");
+        });
+    }
 
-function greenFields() {
-    emojis.forEach((item) => {
-        item.classList.add("green");
-    });
-    setTimeout(removeAllClasses, 1000);
-}
+    function redFields() {
+        emojis.forEach((item) => {
+            item.classList.add("red");
+        });
+        setTimeout(removeAllClasses, 1000);
+    }
+
+    function greenFields() {
+        emojis.forEach((item) => {
+            item.classList.add("green");
+        });
+        setTimeout(removeAllClasses, 1000);
+    }
+})();

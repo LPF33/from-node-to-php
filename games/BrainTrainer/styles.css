@@ -7,6 +7,10 @@
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+#impossible {
+    display: none;
+}
+
 header {
     width: 100%;
     min-height: 10vh;
@@ -31,6 +35,7 @@ header button {
     cursor: pointer;
     margin-left: 10px;
     width: calc(10vh - 10px);
+    min-width: 80px;
     height: calc(10vh - 10px);
 }
 
@@ -169,7 +174,7 @@ main {
     }
 }
 
-@media screen and (min-width: 644px) and (max-width: 1023px) {
+@media screen and (min-width: 644px) and (max-width: 1023px) and (min-height: 600px) {
     #outer-container1 {
         width: 600px;
         height: 600px;
@@ -211,5 +216,27 @@ main {
     .emoji {
         width: 29vw;
         height: 29vw;
+    }
+}
+
+@media screen and (max-height: 400px) and (orientation: landscape) {
+    #impossible {
+        display: -ms-flexbox;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.863);
+        color: white;
+        font-size: 25px;
+        z-index: 10;
     }
 }
