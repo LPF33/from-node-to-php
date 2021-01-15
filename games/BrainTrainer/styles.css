@@ -1,0 +1,181 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header {
+    width: 100%;
+    min-height: 10vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header button {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
+}
+
+header button:hover {
+    background-color: yellow;
+}
+
+header #counter {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    color: rgb(145, 211, 255);
+    width: calc(10vh - 10px);
+    height: calc(10vh - 10px);
+    border: 3px solid white;
+    font-weight: bold;
+}
+
+main {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background-color: black;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#outer-container1 {
+    width: 85vh;
+    height: 85vh;
+    background-color: white;
+}
+
+#outer-container2 {
+    width: 90%;
+    height: 90%;
+    background-color: black;
+}
+
+#outer-container3 {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+}
+
+#outer-container4 {
+    width: 90%;
+    height: 90%;
+    background-color: black;
+}
+
+.emojis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    height: 340px;
+    background-color: black;
+}
+
+.emoji {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 254, 255);
+    border: 2px solid black;
+    text-align: center;
+    line-height: 100px;
+    display: inline-block;
+    margin: 5px;
+    font-size: 30px;
+    user-select: none;
+}
+
+.emoji.flash {
+    filter: invert(90%);
+}
+
+.emoji.red {
+    background-color: red;
+}
+
+.emoji.green {
+    background-color: green;
+}
+
+@media screen and (min-width: 1024px) and (min-height: 918px) {
+    #outer-container1 {
+        width: 800px;
+        height: 800px;
+    }
+
+    .emojis-container {
+        width: 520px;
+        height: 520px;
+    }
+
+    .emoji {
+        width: 160px;
+        height: 160px;
+        line-height: 160px;
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 644px) and (max-width: 1023px) {
+    #outer-container1 {
+        width: 600px;
+        height: 600px;
+    }
+
+    .emojis-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .emoji {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 643px) {
+    header {
+        font-size: 25px;
+    }
+
+    #outer-container1 {
+        width: 100%;
+        height: 100%;
+    }
+
+    #outer-container1,
+    #outer-container3 {
+        background-color: black;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    .emojis-container {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .emoji {
+        width: 29vw;
+        height: 29vw;
+    }
+}

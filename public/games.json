@@ -10,6 +10,11 @@
         "image": "images/Memory.PNG"
     },
     {
+        "name": "BrainTrainer",
+        "description": "Press play! Memorize the flashed emojis, afterwards click the flashed emojis. And so on! You start with three flasing emojis.",
+        "image": "images/BrainTrainer.PNG"
+    },
+    {
         "name": "SpaceInvaders",
         "description": "The classical Shoot''em up game. Don''t let the invaders conquer the world! Control it with left and right arrow keys or with the mouse. Shoot: space-key or mouse left-click. Touch control also possible!",
         "image": "images/SpaceInvaders.PNG"
