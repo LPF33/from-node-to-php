@@ -6,7 +6,10 @@
     let randomEmoji = 0;
     let memory = [];
     let playerMove = false;
-    const touchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints;
+    const touchDevice =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
 
     function gamePlay(counter) {
         playerMove = false;
@@ -16,8 +19,8 @@
             memory.push(randomEmoji);
             setTimeout(() => {
                 emojis[randomEmoji].classList.remove("flash");
-            }, 500);
-            setTimeout(() => gamePlay(--counter), 600);
+            }, 700);
+            setTimeout(() => gamePlay(--counter), 800);
         } else {
             playerMove = true;
             emojis[randomEmoji].classList.remove("flash");
@@ -57,7 +60,6 @@
 
     emojis.forEach((item, index) => {
         item.addEventListener(touchDevice ? "touchstart" : "click", () => {
-            console.log(touchDevice);
             handlePlayerMove(index);
         });
     });
