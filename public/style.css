@@ -138,9 +138,3 @@ canvas {
     -ms-grid-row-align: center;
     align-self: center;
 }
-
-#background {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
