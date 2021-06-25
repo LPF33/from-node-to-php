@@ -4,7 +4,11 @@
     border: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: "MuseoModerno", cursive, sans-serif;
+    font-family: "MuseoModerno", cursive, sans-serif;
+}
+
+body {
+    width: 100%;
 }
 
 #games {
@@ -18,7 +22,7 @@
     justify-content: center;
 }
 
-a {
+.anchor {
     width: 300px;
     max-width: 100vw;
     padding: 5px;
@@ -27,12 +31,20 @@ a {
     margin: 5px;
 }
 
-a:hover {
+.anchor:hover {
     background-color: rgb(255, 255, 184);
 }
 
 img {
     width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 1px black, -2px -2px 1px black, 2px -2px 1px black,
+        -2px 2px 1px black;
 }
 
 h2 {
@@ -46,4 +58,18 @@ h2 {
 p {
     text-align: center;
     color: black;
+}
+
+canvas {
+    align-self: center;
+}
+
+#about {
+    max-width: 600px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+span {
+    font-size: 2rem;
 }

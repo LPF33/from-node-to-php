@@ -11,9 +11,11 @@
         <title>Play Games</title>
     </head>
     <body>
-        <div id="games"></div>
-        <script type="text/javascript" src="/vinyl.js"></script>
-        <script type="text/javascript">
+        <div id="games">
+            <a href="/about"><canvas></canvas></a>
+        </div>
+        <script src="/elephant.js"></script>
+        <script>
             (async () => {
                 const gamesContainer = document.querySelector("#games");
                 try {
@@ -22,13 +24,14 @@
                     let html = "";
                     for (let game of games) {
                         const { name, description, image } = game;
-                        html += `<a href="/${name.toLowerCase()}">
+                        html += `<a href="/${name.toLowerCase()}" class="anchor">
                                     <h2>${name}</h2><img src="${image}"/>
                                     <p>${description}</p>
                                 </a>`;
                     }
 
-                    gamesContainer.innerHTML = html;
+                    gamesContainer.innerHTML += html;
+                    elephant();
                 } catch (err) {
                     console.log(err);
                 }
