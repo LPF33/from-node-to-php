@@ -12,7 +12,17 @@
     </head>
     <body>
         <div id="games">
-            <a href="/about"><canvas></canvas></a>
+            <a class="card" href="/about">
+                <div class="card-inner">
+                    <div class="card-front canvas">
+                        <canvas></canvas>
+                    </div>
+                    <div class="card-back canvas-back">
+                        <h2>About me</h2>
+                        <p>Click & Read</p>
+                    </div>
+                </div>
+            </a>
         </div>
         <script src="/elephant.js"></script>
         <script>
@@ -24,9 +34,11 @@
                     let html = "";
                     for (let game of games) {
                         const { name, description, image } = game;
-                        html += `<a href="/${name.toLowerCase()}" class="anchor">
-                                    <h2>${name}</h2><img src="${image}"/>
-                                    <p>${description}</p>
+                        html += `<a href="/${name.toLowerCase()}" class="card">
+                                    <div class="card-inner">
+                                        <div class="card-front"><h2>${name}</h2><img src="${image}"/></div>
+                                        <div class="card-back"><h2>${name}</h2><p>${description}</p></div>                                        
+                                    </div>
                                 </a>`;
                     }
 

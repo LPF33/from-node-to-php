@@ -16,9 +16,9 @@ const elephant = () => {
     let animationId;
 
     const colors = {
-        first: "rgb(254, 208, 73)",
-        second: "rgb(0, 117, 128)",
-        thrid: "rgb(40, 40, 70)",
+        first: "#FFC947",
+        second: "#185ADB",
+        third: "#EFEFEF",
     };
 
     const draw = () => {
@@ -161,9 +161,9 @@ const elephant = () => {
 
     const canvasSize = () => {
         cancelAnimationFrame(animationId);
-        if (window.innerWidth >= 400) {
+        if (window.innerWidth >= 250) {
             cellWidth = 50;
-            canvas.width = 400;
+            canvas.width = 250;
             canvas.height = 300;
         } else {
             cellWidth = Math.floor(window.innerWidth / cells);
