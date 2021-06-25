@@ -30,6 +30,7 @@ body {
     max-height: 150vw;
     padding: 5px;
     margin: 5px;
+    user-select: none;
 }
 
 .card-inner {
@@ -104,4 +105,10 @@ h2 {
 
 canvas {
     align-self: center;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
