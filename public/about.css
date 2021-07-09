@@ -75,6 +75,28 @@ span {
     font-family: "Monoton", sans-serif;
 }
 
+#contact {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#contact a + a {
+    margin-left: 1rem;
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+    fill: hsl(0, 0%, 100%);
+}
+
+a:hover > svg {
+    fill: #c3ff59;
+}
+
 @media screen and (max-width: 640px) {
     main {
         margin-top: 50px;
