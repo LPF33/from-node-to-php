@@ -8,10 +8,17 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #games {
+    max-width: 1000px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -20,6 +27,8 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .card {
@@ -137,4 +146,29 @@ canvas {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #0a1931;
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    margin-left: 2rem;
+}
+
+svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+footer a:hover > svg {
+    fill: #185adb;
 }
