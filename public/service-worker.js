@@ -1,7 +1,7 @@
 self.addEventListener("install", function (event) {
     event.waitUntil(
         caches.open("lpf-games").then(function (cache) {
-            return cached.addAll([
+            return cache.addAll([
                 "/",
                 "/index.html",
                 "/style.css",
