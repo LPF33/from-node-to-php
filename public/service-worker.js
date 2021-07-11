@@ -31,8 +31,9 @@ self.addEventListener("fetch", function (event) {
                     return response;
                 }
                 return fetch(event.request).then(function (response) {
+                    var clone = response.clone();
                     caches.open(cacheName).then(function (cache) {
-                        cache.put(event.request, response.clone());
+                        cache.put(event.request, clone);
                     });
                     return response;
                 });
