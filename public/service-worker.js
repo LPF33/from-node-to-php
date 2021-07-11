@@ -11,7 +11,7 @@ const filesToCache = [
     "/images/sudoku.PNG",
 ];
 
-const cacheName = "lpf-games2";
+const cacheName = "lpf-games3";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
@@ -29,13 +29,20 @@ self.addEventListener("fetch", function (event) {
                 if (response) {
                     return response;
                 }
-                return caches.open(cacheName).then((cache) => {
-                    cache.put(event.request.url, response.clone());
+                fetch(event.request).then(function (response) {
+                    caches.open(cacheName).then(function (cache) {
+                        cache.put(event.request, response.clone());
+                    });
                     return response;
                 });
             })
             .catch(function () {
-                return fetch(event.request);
+                return fetch(event.request).then(function (response) {
+                    return caches.open(cacheName).then(function (cache) {
+                        cache.put(event.request, response.clone());
+                        return response;
+                    });
+                });
             })
     );
 });
