@@ -9,6 +9,7 @@ const filesToCache = [
     "/images/RabbitTracker.PNG",
     "/images/SpaceInvaders.PNG",
     "/images/sudoku.PNG",
+    "/no-connection.html",
 ];
 
 const cacheName = "lpf-games3";
@@ -37,12 +38,7 @@ self.addEventListener("fetch", function (event) {
                 });
             })
             .catch(function () {
-                return fetch(event.request).then(function (response) {
-                    return caches.open(cacheName).then(function (cache) {
-                        cache.put(event.request, response.clone());
-                        return response;
-                    });
-                });
+                return caches.match("/no-connection.html");
             })
     );
 });
