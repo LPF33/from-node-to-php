@@ -8,7 +8,7 @@
             href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
             rel="stylesheet"
         />
-        <link href="/style.css" rel="stylesheet" />
+        <link href="/styles/style.css" rel="stylesheet" />
         <title>Play Games</title>
     </head>
     <body>
@@ -62,14 +62,14 @@
         <script>
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker
-                    .register("/service-worker.js")
+                    .register("/scripts/service-worker.js")
                     .then((reg) =>
                         console.log("register service worker success", reg)
                     )
                     .catch(() => console.log("register service worker failed"));
             }
         </script>
-        <script src="/elephant.js"></script>
+        <script src="/scripts/elephant.js"></script>
         <script>
             (async () => {
                 const gamesContainer = document.querySelector("#games");

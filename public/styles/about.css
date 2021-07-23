@@ -62,12 +62,12 @@ header {
 
 nav {
     position: fixed;
-    top: 30px;
+    top: 25px;
     right: 10px;
     height: 60px;
     color: var(--color-hover);
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     z-index: 100;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
