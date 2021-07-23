@@ -176,6 +176,11 @@ footer {
 footer a {
     text-decoration: none;
     margin-left: 2rem;
+    color: white;
+}
+
+footer a:hover {
+    color: #185adb;
 }
 
 svg {

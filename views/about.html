@@ -16,7 +16,17 @@
         <title>About me</title>
     </head>
     <body>
-        <a id="x" href="/">X</a>
+        <header>
+            <div></div>
+            <div></div>
+        </header>
+        <nav>
+            <a href="/about#projects">Projects</a>
+            <a href="/about#stack">Stack</a>
+            <a href="/about#top">Intro</a>
+            <a href="/">Main</a>
+        </nav>
+
         <main>
             <h1>LARS-PETER FEIGL</h1>
             <h1>WEB DEVELOPER</h1>
@@ -52,10 +62,10 @@
                 </a>
             </p>
             <br />
-            <h2>Stack</h2>
+            <h2 id="stack">Stack</h2>
             <p>
-                JavaScript ES6, Java (started), TypeScript, HTML5, CSS3, SASS,
-                SQL, Node.js, React, Redux, Vue, jQuery, PostgreSQL, MongoDB,
+                JavaScript ES6, TypeScript, HTML5, CSS3, SASS, SQL, Node.js,
+                React, Redux, Vue, jQuery, Jest, Supertest, PostgreSQL, MongoDB,
                 Git
             </p>
             <div id="contact">
@@ -113,6 +123,10 @@
                 <br />
                 Enjoy the sun in nature while walking or kayaking!
             </p>
+            <br />
+            <h2 id="projects">Projects</h2>
+            <div>Some projects following</div>
         </main>
+        <script src="/about.js"></script>
     </body>
 </html>
