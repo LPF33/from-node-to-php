@@ -4,6 +4,7 @@ const filesToCache = [
     "/style.css",
     "/elephant.js",
     "/games.json",
+    "/about.js",
     "/images/Braintrainer.PNG",
     "/images/Memory.PNG",
     "/images/RabbitTracker.PNG",
@@ -12,7 +13,7 @@ const filesToCache = [
     "/no-connection.html",
 ];
 
-const cacheName = "lpf-games5";
+const cacheName = "lpf-games6";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
