@@ -52,6 +52,13 @@ h2 {
     font-weight: normal;
 }
 
+h4 {
+    font-family: var(--style-font);
+    font-weight: normal;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
 span {
     font-size: 2rem;
 }
@@ -120,6 +127,66 @@ svg {
 
 a:hover > svg {
     fill: var(--color-hover);
+}
+
+#projects-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 90vw;
+    max-width: 250px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.project-card:hover {
+    background-color: var(--color-hover);
+}
+
+.project-card h4,
+.project-card p {
+    color: black;
+}
+
+.project-card > p {
+    text-align: left;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.project-card > div {
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.project-card > div > p {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 720px) {

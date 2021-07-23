@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Shoppy",
+        "description": "Private app. Shopping list, budget (missing with D3). Still under construction!",
+        "stack": ["Vue", "Firebase", "Testing", "D3"],
+        "link": "https://github.com/LPF33/shoppy"
+    },
+    {
+        "name": "Guess flag",
+        "description": "Project to demonstrate how Socket.io works. Multiplayer game for guessing flags. Socket.io rooms, Redis for caching game data for each room.",
+        "stack": ["Express", "Redis", "Socket.io"],
+        "link": "https://github.com/LPF33/guess-flag"
+    },
+    {
+        "name": "Photo eCommerce-Shop",
+        "description": "Interested in building a responsive Webshop with backend & frontend. Manage stock, handle orders, update shopping cart & implement checkout process.",
+        "stack": ["TypeScript", "React", "Redux", "MySQL", "node.js", "JWT"],
+        "link": "https://github.com/LPF33/OnlinePhotoShop"
+    }
+]

@@ -75,7 +75,7 @@
                 const gamesContainer = document.querySelector("#games");
                 try {
                     const fetchJson = await fetch("/games.json");
-                    games = await fetchJson.json();
+                    const games = await fetchJson.json();
                     let html = "";
                     for (let game of games) {
                         const { name, description, image } = game;
