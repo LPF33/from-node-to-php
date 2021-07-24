@@ -12,7 +12,7 @@ const filesToCache = [
     "/no-connection.html",
 ];
 
-const cacheName = "lpf-games9";
+const cacheName = "sw-lpf-games-v11";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
