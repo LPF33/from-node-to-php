@@ -15,7 +15,7 @@
         "name": "Vue Puzzle Testing",
         "description": "Simple Puzzle App with Testing. After building a Testing-Tool with Spiced, I got more and more interested in Testing.",
         "stack": ["Vue", "Jest", "@vue/test-utils"],
-        "link": "https://github.com/LPF33/loom"
+        "link": "https://github.com/LPF33/puzzle-testing"
     },
     {
         "name": "Photo eCommerce-Shop",
@@ -35,7 +35,7 @@
         "name": "Draw & Guess",
         "description": "Demonstration for teaching how Socket.io works. One player draws, the others have to guess what it is.",
         "stack": ["Express", "Socket.io"],
-        "link": "https://github.com/LPF33/draw-guess/tree/lesson_game"
+        "link": "https://github.com/LPF33/draw-guess"
     },
     {
         "name": "TypeScript side projects",
