@@ -1,8 +1,8 @@
 [
     {
         "name": "Shoppy",
-        "description": "Private app. Shopping list, budget (missing with D3). Still under construction!",
-        "stack": ["Vue", "Firebase", "Testing", "D3"],
+        "description": "Private app. PWA. Order from my girlfriend. Shopping list, cook calendar, budget (missing). Still under construction!",
+        "stack": ["Vue", "Firebase", "Testing", "SVG"],
         "link": "https://github.com/LPF33/shoppy"
     },
     {
