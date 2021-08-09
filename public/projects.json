@@ -1,5 +1,11 @@
 [
     {
+        "name": "Chrome Extension",
+        "description": "4 features: Tracker, Break, Snippet-Safer, Color-Picker",
+        "stack": ["React", "Context API", "Chrome", "SVG"],
+        "link": "https://github.com/LPF33/first-chrome-extension"
+    },
+    {
         "name": "Shoppy",
         "description": "Private app. PWA. Order from my girlfriend. Shopping list, cook calendar, budget (missing). Still under construction!",
         "stack": ["Vue", "Firebase", "Testing", "SVG"],
