@@ -7,8 +7,14 @@
     },
     {
         "name": "Shoppy",
-        "description": "Private app. PWA. Order from my girlfriend. Shopping list, cook calendar, budget (missing). Still under construction!",
-        "stack": ["Vue", "Firebase", "Testing", "SVG"],
+        "description": "Private app. PWA. Order from my girlfriend. Shopping list, cook calendar, monthly expenses (SVG missing).",
+        "stack": [
+            "Vue",
+            "TypeScript",
+            "Composition API",
+            "Firebase",
+            "Testing"
+        ],
         "link": "https://github.com/LPF33/shoppy"
     },
     {
