@@ -7,13 +7,14 @@
     },
     {
         "name": "Shoppy",
-        "description": "Private app. PWA. Order from my girlfriend. Shopping list, cook calendar, monthly expenses (SVG missing).",
+        "description": "Private app. PWA. Shopping list, cook calendar, monthly expenses.",
         "stack": [
             "Vue",
             "TypeScript",
             "Composition API",
             "Firebase",
-            "Testing"
+            "Testing",
+            "Highcharts"
         ],
         "link": "https://github.com/LPF33/shoppy"
     },
