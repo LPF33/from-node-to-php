@@ -1,18 +1,17 @@
 const filesToCache = [
     "/",
-    "/index.html",
     "/styles/style.css",
-    "/scripts/elephant.js",
-    "/games.json",
+    "/scripts/glide.min.js",
     "/images/Braintrainer.PNG",
     "/images/Memory.PNG",
     "/images/RabbitTracker.PNG",
     "/images/SpaceInvaders.PNG",
     "/images/sudoku.PNG",
+    "/images/wirrwarr.jpg",
     "/no-connection.html",
 ];
 
-const cacheName = "sw-lpf-games-v21";
+const cacheName = "sw-lpf-games-v22";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
