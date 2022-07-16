@@ -2,7 +2,7 @@
             <aside>
                 <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Photo by Pawel Czerwinski</a>
             </aside>
-            <a href="/about">LARS-PETER FEIGL</a>
+            <a href="/">LARS-PETER FEIGL</a>
             <a
                 href="https://github.com/lpf33"
                 target="_blank"
@@ -36,14 +36,14 @@
             </a>
         </footer>
         <script>
-            /* if ("serviceWorker" in navigator) {
+            if ("serviceWorker" in navigator) {
                 navigator.serviceWorker
                     .register("/service-worker.js")
                     .then((reg) =>
                         console.log("register service worker success", reg)
                     )
                     .catch(() => console.log("register service worker failed"));
-            } */
+            }
         </script>
     </body>
 </html>
