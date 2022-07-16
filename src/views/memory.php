@@ -7,7 +7,7 @@
         <link href="/games/memory/Memory.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="/games/memory/pictures/favicon.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/games/Memory/pictures/favicon.png" sizes="96x96">
     </head>    
     <body>
         <a id="x" href="/play-games">X</a>
@@ -108,6 +108,6 @@
         <div></div>
         <div id="black"></div>
         
-        <script src="/games/memory/Memory.js" type="text/javascript"></script>
+        <script src="/games/Memory/Memory.js" type="text/javascript"></script>
     </body>
 </html>

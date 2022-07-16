@@ -228,10 +228,10 @@
                         boxStorage[pair2] = picture;
                         document.getElementById(
                             `p${pair1}`
-                        ).style.backgroundImage = `URL("/games/memory/pictures/Memory${picture}.jpg")`;
+                        ).style.backgroundImage = `URL("/games/Memory/pictures/Memory${picture}.jpg")`;
                         document.getElementById(
                             `p${pair2}`
-                        ).style.backgroundImage = `URL("/games/memory/pictures/Memory${picture}.jpg")`;
+                        ).style.backgroundImage = `URL("/games/Memory/pictures/Memory${picture}.jpg")`;
                     }
                 }
                 picturePairs();

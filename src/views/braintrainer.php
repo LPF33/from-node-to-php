@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/games/Braintrainer/styles.css" />
+        <link rel="stylesheet" href="/games/BrainTrainer/styles.css" />
         <title>Brain Trainer</title>
     </head>
     <body>
@@ -46,6 +46,6 @@
                 </div>
             </div>
         </main>
-        <script src="/games/Braintrainer/script.js"></script>
+        <script src="/games/BrainTrainer/script.js"></script>
     </body>
 </html>

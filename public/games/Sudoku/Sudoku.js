@@ -230,8 +230,8 @@
         helpSelectionNumber.addEventListener("click", () => {
             helpSelectNumber = helpSelectNumber === 1 ? 0 : 1;
 
-            helpSelectionNumber.style.backgroundImage = helpSelectNumber === 1 ? 'URL("./images/possibleNumbers.PNG")'
-                                        : 'URL("./images/allNumbers.PNG")';
+            helpSelectionNumber.style.backgroundImage = helpSelectNumber === 1 ? 'URL("/games/Sudoku/images/possibleNumbers.PNG")'
+                                        : 'URL("/games/Sudoku/images/allNumbers.PNG")';
         });
 
         let selectedCellBefore = "";
@@ -354,7 +354,7 @@
         const onoff =  () => {
             if(highlightOn === "on"){
                 highlightOn = "off";
-                notes.style.backgroundImage = "url('./images/makeNotes.PNG')";
+                notes.style.backgroundImage = "url('/games/Sudoku/images/makeNotes.PNG')";
                 counterCellArray.forEach((item, index) => {   
                     item.children[0].addEventListener("click", makeNotes);
                     item.children[1].style.visibility = "hidden";
@@ -376,7 +376,7 @@
                 })
             } else {
                 highlightOn = "on";
-                notes.style.backgroundImage = "url('./images/highlightNumber.PNG')";
+                notes.style.backgroundImage = "url('/games/Sudoku/images/highlightNumber.PNG')";
                 counterCellArray.forEach((item, index) => { 
                     item.children[0].removeEventListener("click", makeNotes);
                     item.children[1].style.visibility = "visible";

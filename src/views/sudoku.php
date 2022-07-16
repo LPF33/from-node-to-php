@@ -12,7 +12,7 @@
         <link
             rel="icon"
             type="image/png"
-            href="images/makeNotes.PNG"
+            href="/games/Sudoku/images/makeNotes.PNG"
             sizes="96x96"
         />
     </head>
@@ -36,11 +36,11 @@
                 <button id="manualExit" class="windowbutton">PLAY</button>
                 <div class="manualDescription">
                     <div class="manualflex">
-                        <img src="images/hintbutton.PNG" class="manualImg" />
+                        <img src="/games/Sudoku/images/hintbutton.PNG" class="manualImg" />
                         <div>HINT-button! A number will appear in blue!</div>
                     </div>
                     <div class="manualflex">
-                        <img src="images/checkbutton.PNG" class="manualImg" />
+                        <img src="/games/Sudoku/images/checkbutton.PNG" class="manualImg" />
                         <div>
                             Check-button! Check if your choosen numbers are
                             correct. If not, the background of the numbers will
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="manualflex">
-                        <img src="images/allNumbers.PNG" class="manualImg" />
+                        <img src="/games/Sudoku/images/allNumbers.PNG" class="manualImg" />
                         <div>
                             In the default setting you are given all numbers
                             (1-9) to choose from, make the selection for a cell.
@@ -60,7 +60,7 @@
                     </div>
                     <div class="manualflex">
                         <img
-                            src="images/possibleNumbers.PNG"
+                            src="/games/Sudoku/images/possibleNumbers.PNG"
                             class="manualImg"
                         />
                         <div>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="manualflex">
-                        <img src="images/pausebutton.PNG" class="manualImg" />
+                        <img src="/games/Sudoku/images/pausebutton.PNG" class="manualImg" />
                         <div>
                             It shows your used time and on the right is the
                             pause button to take a break!
@@ -80,7 +80,7 @@
                     </div>
                     <div class="manualflex">
                         <img
-                            src="images/highlightNumber.PNG"
+                            src="/games/Sudoku/images/highlightNumber.PNG"
                             class="manualImg"
                         />
                         <div>
@@ -94,12 +94,12 @@
                     </div>
                     <div class="manualflex">
                         <img
-                            src="images/bottomNumbers.PNG"
+                            src="/games/Sudoku/images/bottomNumbers.PNG"
                             class="manualImg2"
                         />
                     </div>
                     <div class="manualflex">
-                        <img src="images/makeNotes.PNG" class="manualImg" />
+                        <img src="/games/Sudoku/images/makeNotes.PNG" class="manualImg" />
                         <div>
                             „make-notes-mode“: You can only do this before
                             playing! Click on a cell, than click on a number on
