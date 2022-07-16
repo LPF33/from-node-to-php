@@ -24,8 +24,13 @@
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-image: url("/images/wirrwarr.jpg");
@@ -45,9 +50,15 @@ p {
 header {
     position: relative;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     background-color: var(--header-background);
     color: var(--font-color);
     padding: 10px;
@@ -80,7 +91,11 @@ header label {
 header label div {
     width: 60px;
     border: 5px solid rgb(28, 78, 121);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
     transition: 0.5s all;
 }
 
@@ -89,23 +104,35 @@ header label div+div {
 }
 
 header label div:first-child {
-    transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
 }
 
 header input:checked+label div:first-child {
     border: 5px solid white;
-    transform: rotate(30deg);
-    transform-origin: bottom left;
+    -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+            transform: rotate(30deg);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
 }
 
 header label div:last-child {
-    transform-origin: top left;
+    -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+            transform-origin: top left;
 }
 
 header input:checked+label div:last-child {
     border: 5px solid white;
-    transform: rotate(-30deg);
-    transform-origin: top left;
+    -webkit-transform: rotate(-30deg);
+        -ms-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+    -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+            transform-origin: top left;
 }
 
 header input:not(:checked)+label+nav {
@@ -116,7 +143,9 @@ header input:checked+label+nav {
     position: fixed;
     top: 0;
     left: 100%;
-    transform: rotate(90deg) translate(50%, 140%);
+    -webkit-transform: rotate(90deg) translate(50%, 140%);
+        -ms-transform: rotate(90deg) translate(50%, 140%);
+            transform: rotate(90deg) translate(50%, 140%);
     background-color: black;
     padding: 0 10px;
     z-index: 1;
@@ -133,7 +162,9 @@ header input:checked+label+nav {
         display: block;
         position: relative;
         padding: 0;
-        transform: rotate(0deg) translate(0, 0);
+        -webkit-transform: rotate(0deg) translate(0, 0);
+            -ms-transform: rotate(0deg) translate(0, 0);
+                transform: rotate(0deg) translate(0, 0);
         background-color: transparent;
         left: 0;
     }
@@ -141,7 +172,9 @@ header input:checked+label+nav {
 
 main {
     position: relative;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     padding: 20px;
     width: 100%;
     overflow-y: auto;
@@ -154,10 +187,19 @@ main {
 }
 
 #intro section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 #intro h1, 
@@ -181,45 +223,56 @@ main {
 
 .carousel {
     margin: 0 auto;
-    width: 900px;
     max-width: 100vw;
-    height: 300px;
     max-height: 60vh;
-    opacity: 1;
+    height: 300px;
 }
 
 .glide__slide a {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-rows: 40% 40%;
+    grid-template-rows: 40% 40%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
     text-decoration: none;
     color: var(--carousel-fontColor);
+    padding-top: 20px;
 }
 
-.glide__slide picture {
-    width: 50%;
-    height: 100%;
+.glide__slide a > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.glide__slide a > *:nth-child(2) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
 }
 
 .glide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 0 20px 20px 0;
-    filter: grayscale(0.9);
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0 0 20px 20px;
+    -webkit-filter: grayscale(0.9);
+            filter: grayscale(0.9);
 }
 
 .glide__slide div {
-    width: 40%;
+    width: 100%;
     padding: 20px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 20px 0 0;
     background-color: var(--carousel-background);
 }
 
 .glide__bullets {
     position: absolute;
-    bottom: 0;
+    top: 0;
 }
 
 .glide__bullet {
@@ -237,11 +290,63 @@ main {
     border: 2px solid black;
 }
 
+@media screen and (min-width: 590px) {
+    .glide__slide a {
+        -ms-grid-rows: 60vh;
+        grid-template-rows: 60vh;
+        -ms-grid-columns: 60% 20%;
+        grid-template-columns: 60% 20%;
+    }
+    .glide__slide a > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .glide__slide a > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+    
+    .glide img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        border-radius: 0 20px 20px 0;
+        -webkit-filter: grayscale(0.9);
+                filter: grayscale(0.9);
+    }
+    
+    .glide__slide div {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px 0 0 20px;
+        background-color: var(--carousel-background);
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .glide__slide a {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-grid-columns: 40% 30%;
+        grid-template-columns: 40% 30%;
+    }
+}
+
 #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -252,8 +357,13 @@ main {
     border-radius: 10px;
     background-color: white;
     color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .project-card h4 {
@@ -265,13 +375,18 @@ main {
 
 .project-card > p {
     text-align: left;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 
 .project-card > div {
     margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 2px;
 }
 
@@ -285,9 +400,15 @@ footer {
     position: relative;
     width: 100%;
     padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     background-color: var(--footer-background);
     color: var(--font-color);
     font-family: var(--monoton-font);

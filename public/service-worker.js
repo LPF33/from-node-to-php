@@ -1,5 +1,7 @@
 const filesToCache = [
     "/",
+    "/play-games",
+    "/projects",
     "/styles/style.css",
     "/scripts/glide.min.js",
     "/images/Braintrainer.PNG",
@@ -12,7 +14,7 @@ const filesToCache = [
     "/scripts/elephant.js"
 ];
 
-const cacheName = "sw-lpf-games-v23";
+const cacheName = "sw-lpf-games-v24";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
