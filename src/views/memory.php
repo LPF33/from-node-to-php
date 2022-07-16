@@ -4,7 +4,7 @@
         <title>MEMORY</title>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width" initial-scale=1>
-        <link href="/games/memory/Memory.css" type="text/css" rel="stylesheet">
+        <link href="/games/Memory/Memory.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="/games/Memory/pictures/favicon.png" sizes="96x96">

@@ -20,12 +20,15 @@
     </head>
     <body>
         <h1>You need internet connection</h1>
+        <canvas></canvas>
+        <h3>Automatic redirecting in 3 seconds!</h3>
         <h3>Files not cached</h3>
-        <a href="/">Intro</a>
+        <a href="/">Go back</a>
     </body>
     <script>
         setTimeout(() => {
             location.replace("/");
         }, 3000);
     </script>
+    <script src="/scripts/elephant.js"></script>
 </html>

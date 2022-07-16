@@ -1,4 +1,4 @@
-const elephant = () => {
+(function(){
     const canvas = document.querySelector("canvas");
     if (!canvas) {
         return;
@@ -186,4 +186,4 @@ const elephant = () => {
     window.addEventListener("resize", function () {
         canvasSize();
     });
-};
+})();

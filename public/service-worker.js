@@ -9,9 +9,10 @@ const filesToCache = [
     "/images/sudoku.PNG",
     "/images/wirrwarr.jpg",
     "/no-connection.html",
+    "/scripts/elephant.js"
 ];
 
-const cacheName = "sw-lpf-games-v22";
+const cacheName = "sw-lpf-games-v23";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
