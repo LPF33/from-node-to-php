@@ -1,10 +1,10 @@
 <?php 
     $games = [
         [
-           'name' => 'Sudoku',
-            'description' => 'Sudoku is played on a grid of 9 x 9 spaces. Within the rows and columns are 9 squares. Each row, column and square needs to be filled out with the numbers 1-9, without repeating any numbers within the row, column or square. ',
-            'image' => '/images/sudoku.PNG',
-            'href' => '/sudoku'
+            'name' => 'BrainTrainer',
+            'description' => 'Press play! Memorize the flashed emojis, afterwards click the flashed emojis. And so on! You start with three flasing emojis.',
+            'image' => '/images/Braintrainer.PNG',
+            'href' => '/braintrainer'
         ],
         [
             'name' => 'Memory',
@@ -13,10 +13,10 @@
             'href' => '/memory'
         ],
         [
-            'name' => 'BrainTrainer',
-            'description' => 'Press play! Memorize the flashed emojis, afterwards click the flashed emojis. And so on! You start with three flasing emojis.',
-            'image' => '/images/Braintrainer.PNG',
-            'href' => '/braintrainer'
+            'name' => 'Sudoku',
+             'description' => 'Sudoku is played on a grid of 9 x 9 spaces. Within the rows and columns are 9 squares. Each row, column and square needs to be filled out with the numbers 1-9, without repeating any numbers within the row, column or square. ',
+             'image' => '/images/sudoku.PNG',
+             'href' => '/sudoku'
         ],
         [
             'name' => 'SpaceInvaders',
