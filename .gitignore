@@ -1,7 +1,7 @@
 .vs
 old
 /vendor/
-.app.log
+app.log
 
 .DS_Store
 public/.DS_Store
