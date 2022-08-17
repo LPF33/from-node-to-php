@@ -1,6 +1,18 @@
 <?php 
 $projects = [
     [
+        "name" => "CSV Read&Write",
+        "description" => "Tabular representation of the data from CSV file. Edit and add data to CSV file. Visualize data with a Pie-Chart. Import/Export CSV file",
+        "stack" => [
+            "PHP",
+            "Laravel",
+            "Vue3",
+            "Composition API",
+            "TypeScript"
+        ],
+        "link" => "https://github.com/LPF33/laravel-vue-csv-app"
+    ],
+    [
         "name" => "Chrome Extension",
         "description" => "4 features: Tracker, Break, Snippet-Safer, Color-Picker",
         "stack" => ["React", "Context API", "Chrome", "SVG"],
