@@ -1,6 +1,6 @@
-<?php 
-    $title = "Welcome!";
-    require('partials/header.php');
+<?php
+$title = "Welcome!";
+require('partials/header.php');
 ?>
 
     <main id="intro">

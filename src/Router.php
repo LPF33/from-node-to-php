@@ -1,22 +1,28 @@
-<?php declare(strict_types=1);
+<?php
 
-class Router {
+declare(strict_types=1);
+
+class Router
+{
     public static $viewsPath = '../src/views/';
-    
+
     protected $routes = [];
 
-    public static function load(string $file) {
+    public static function load(string $file)
+    {
         $router = new self();
         require $file;
         return $router;
     }
 
-    public function setRoute(string $uri, string $controller) {
+    public function setRoute(string $uri, string $controller)
+    {
         $this->routes[$uri] = self::$viewsPath.$controller;
     }
 
-    public function direct(string $uri) {
-        if(array_key_exists($uri, $this->routes)){
+    public function direct(string $uri)
+    {
+        if (array_key_exists($uri, $this->routes)) {
             require $this->routes[$uri];
             return;
         }
@@ -24,7 +30,8 @@ class Router {
         $this->redirect('/');
     }
 
-    public function redirect(string $uri){
+    public function redirect(string $uri)
+    {
         header("Location: $uri", true);
     }
 }

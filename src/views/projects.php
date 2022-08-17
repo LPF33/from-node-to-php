@@ -1,4 +1,4 @@
-<?php 
+<?php
 $projects = [
     [
         "name" => "CSV Read&Write",
@@ -147,7 +147,7 @@ $projects = [
     ];
 
 $title = "About me!";
-require('partials/header.php'); 
+require('partials/header.php');
 ?>
     <main id="projects">
         <?php foreach ($projects as $value): ?>
