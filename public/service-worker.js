@@ -14,7 +14,7 @@ const filesToCache = [
     "/scripts/elephant.js"
 ];
 
-const cacheName = "sw-lpf-games-v26";
+const cacheName = "sw-lpf-games-v27";
 
 self.addEventListener("install", function (event) {
     event.waitUntil(

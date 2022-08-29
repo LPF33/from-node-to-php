@@ -8,7 +8,8 @@ $projects = [
             "Laravel",
             "Vue3",
             "Composition API",
-            "TypeScript"
+            "TypeScript",
+            "Docker"
         ],
         "link" => "https://github.com/LPF33/laravel-vue-csv-app"
     ],
